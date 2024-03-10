@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0w3k020ii0vt"]
+
+[ext_resource type="PackedScene" uid="uid://col1je5cap3xb" path="res://Scenes/map.tscn" id="1_1amfx"]
+[ext_resource type="PackedScene" uid="uid://xdiwuhdhjs2a" path="res://Scenes/player.tscn" id="2_twoi6"]
+[ext_resource type="PackedScene" uid="uid://vhobycmichuj" path="res://Scenes/PauseMenu.tscn" id="3_1cmoo"]
+
+[sub_resource type="Environment" id="Environment_vc05b"]
+background_mode = 2
+background_energy_multiplier = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0169
+
+[node name="Level" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vc05b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.79259, 0.331073, 0.512047, -0.547668, 0.0173376, 0.836516, 0.268071, -0.943446, 0.19506, 0, 229.188, 0)
+visible = false
+light_color = Color(0.92549, 0.827451, 0.952941, 1)
+light_energy = 1.384
+light_indirect_energy = 7.784
+light_volumetric_fog_energy = 12.392
+
+[node name="Map" parent="." instance=ExtResource("1_1amfx")]
+
+[node name="Player" parent="." instance=ExtResource("2_twoi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.7716, 10.3743, 19.0368)
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_1cmoo")]
+process_mode = 3
+visible = false
+offset_right = 1154.0
+offset_bottom = 650.0

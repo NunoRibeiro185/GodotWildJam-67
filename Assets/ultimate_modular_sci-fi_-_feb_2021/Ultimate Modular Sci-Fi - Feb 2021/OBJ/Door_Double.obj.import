@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vauyufn0pwr3"
+path="res://.godot/imported/Door_Double.obj-52f4c152633752eb1f10f5f5d8feb740.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Door_Double.obj-52f4c152633752eb1f10f5f5d8feb740.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Door_Double.obj"
+dest_files=["res://.godot/imported/Door_Double.obj-52f4c152633752eb1f10f5f5d8feb740.mesh", "res://.godot/imported/Door_Double.obj-52f4c152633752eb1f10f5f5d8feb740.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

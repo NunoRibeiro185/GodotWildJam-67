@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://h6074ytx5gh2"
+path="res://.godot/imported/Wall_Empty.obj-ea427d2429945c185a568000ecd0cd93.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Empty.obj-ea427d2429945c185a568000ecd0cd93.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Wall_Empty.obj"
+dest_files=["res://.godot/imported/Wall_Empty.obj-ea427d2429945c185a568000ecd0cd93.mesh", "res://.godot/imported/Wall_Empty.obj-ea427d2429945c185a568000ecd0cd93.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

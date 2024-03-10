@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c03vdlijmhan7"
+path="res://.godot/imported/RoofTile_OrangeVent.obj-f15a24e943bc3d078ba0908b4f0142aa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RoofTile_OrangeVent.obj-f15a24e943bc3d078ba0908b4f0142aa.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/RoofTile_OrangeVent.obj"
+dest_files=["res://.godot/imported/RoofTile_OrangeVent.obj-f15a24e943bc3d078ba0908b4f0142aa.mesh", "res://.godot/imported/RoofTile_OrangeVent.obj-f15a24e943bc3d078ba0908b4f0142aa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

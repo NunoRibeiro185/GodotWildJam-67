@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://baxqckhww7ri3"
+path="res://.godot/imported/RoofTile_Corner_Pipes.obj-4745226d3a0ac0aef2fb39c27a6834ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RoofTile_Corner_Pipes.obj-4745226d3a0ac0aef2fb39c27a6834ce.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/RoofTile_Corner_Pipes.obj"
+dest_files=["res://.godot/imported/RoofTile_Corner_Pipes.obj-4745226d3a0ac0aef2fb39c27a6834ce.mesh", "res://.godot/imported/RoofTile_Corner_Pipes.obj-4745226d3a0ac0aef2fb39c27a6834ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

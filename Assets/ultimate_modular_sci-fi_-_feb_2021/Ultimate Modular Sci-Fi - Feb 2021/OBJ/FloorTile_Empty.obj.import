@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8hj348t24yb"
+path="res://.godot/imported/FloorTile_Empty.obj-c54d3c15bc5ba28974856dc818c3c330.mesh"
+
+[deps]
+
+files=["res://.godot/imported/FloorTile_Empty.obj-c54d3c15bc5ba28974856dc818c3c330.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/FloorTile_Empty.obj"
+dest_files=["res://.godot/imported/FloorTile_Empty.obj-c54d3c15bc5ba28974856dc818c3c330.mesh", "res://.godot/imported/FloorTile_Empty.obj-c54d3c15bc5ba28974856dc818c3c330.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

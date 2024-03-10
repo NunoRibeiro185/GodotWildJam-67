@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cni6v2dbryoja"
+path="res://.godot/imported/ThreeWindows_Wall_SideB.obj-7f11cf4ead67d4b3876678dae55183de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ThreeWindows_Wall_SideB.obj-7f11cf4ead67d4b3876678dae55183de.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/ThreeWindows_Wall_SideB.obj"
+dest_files=["res://.godot/imported/ThreeWindows_Wall_SideB.obj-7f11cf4ead67d4b3876678dae55183de.mesh", "res://.godot/imported/ThreeWindows_Wall_SideB.obj-7f11cf4ead67d4b3876678dae55183de.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

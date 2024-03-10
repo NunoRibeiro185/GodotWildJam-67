@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvgryb3yiytlx"
+path="res://.godot/imported/FloorTile_InnerCorner.obj-7e24cddd146dddbe762128d475036cab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/FloorTile_InnerCorner.obj-7e24cddd146dddbe762128d475036cab.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/FloorTile_InnerCorner.obj"
+dest_files=["res://.godot/imported/FloorTile_InnerCorner.obj-7e24cddd146dddbe762128d475036cab.mesh", "res://.godot/imported/FloorTile_InnerCorner.obj-7e24cddd146dddbe762128d475036cab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

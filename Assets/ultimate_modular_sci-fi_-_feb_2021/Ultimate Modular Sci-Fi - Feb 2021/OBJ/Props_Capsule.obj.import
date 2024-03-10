@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b70ia2abj5gt1"
+path="res://.godot/imported/Props_Capsule.obj-156086325e372281bc333c1528299b44.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Props_Capsule.obj-156086325e372281bc333c1528299b44.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Props_Capsule.obj"
+dest_files=["res://.godot/imported/Props_Capsule.obj-156086325e372281bc333c1528299b44.mesh", "res://.godot/imported/Props_Capsule.obj-156086325e372281bc333c1528299b44.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

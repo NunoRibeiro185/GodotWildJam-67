@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8xvqv0273nd3"
+path="res://.godot/imported/Column_Slim.obj-5396ef405b7ce9c8982215df6a25f303.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Column_Slim.obj-5396ef405b7ce9c8982215df6a25f303.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Column_Slim.obj"
+dest_files=["res://.godot/imported/Column_Slim.obj-5396ef405b7ce9c8982215df6a25f303.mesh", "res://.godot/imported/Column_Slim.obj-5396ef405b7ce9c8982215df6a25f303.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

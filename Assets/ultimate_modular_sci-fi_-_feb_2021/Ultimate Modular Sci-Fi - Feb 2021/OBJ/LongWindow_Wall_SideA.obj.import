@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://2bd5v41gfepk"
+path="res://.godot/imported/LongWindow_Wall_SideA.obj-df52476c901a5861f47c307e236a2a0b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/LongWindow_Wall_SideA.obj-df52476c901a5861f47c307e236a2a0b.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/LongWindow_Wall_SideA.obj"
+dest_files=["res://.godot/imported/LongWindow_Wall_SideA.obj-df52476c901a5861f47c307e236a2a0b.mesh", "res://.godot/imported/LongWindow_Wall_SideA.obj-df52476c901a5861f47c307e236a2a0b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

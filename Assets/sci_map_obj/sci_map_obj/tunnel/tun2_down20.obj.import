@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bncfp46w405i8"
+path="res://.godot/imported/tun2_down20.obj-b86d9d28d1458035b958223d15611851.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tun2_down20.obj-b86d9d28d1458035b958223d15611851.mesh"]
+
+source_file="res://Assets/sci_map_obj/sci_map_obj/tunnel/tun2_down20.obj"
+dest_files=["res://.godot/imported/tun2_down20.obj-b86d9d28d1458035b958223d15611851.mesh", "res://.godot/imported/tun2_down20.obj-b86d9d28d1458035b958223d15611851.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

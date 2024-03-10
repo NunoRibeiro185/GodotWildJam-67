@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://vhobycmichuj"]
+
+[ext_resource type="Script" path="res://Scenes/PauseMenu.gd" id="1_jvpmf"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jvpmf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 296.0
+offset_right = 1067.0
+offset_bottom = 379.0
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 60
+text = "Paused"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 488.0
+offset_right = 1009.0
+offset_bottom = 554.0
+theme_override_font_sizes/font_size = 42
+text = "Quit
+"
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

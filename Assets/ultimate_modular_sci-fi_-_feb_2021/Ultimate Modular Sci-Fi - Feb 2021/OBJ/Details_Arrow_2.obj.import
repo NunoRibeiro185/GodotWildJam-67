@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c55nusxn2o1ia"
+path="res://.godot/imported/Details_Arrow_2.obj-08e6035cdee3e2c227fe7377d65136d0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Details_Arrow_2.obj-08e6035cdee3e2c227fe7377d65136d0.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Details_Arrow_2.obj"
+dest_files=["res://.godot/imported/Details_Arrow_2.obj-08e6035cdee3e2c227fe7377d65136d0.mesh", "res://.godot/imported/Details_Arrow_2.obj-08e6035cdee3e2c227fe7377d65136d0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

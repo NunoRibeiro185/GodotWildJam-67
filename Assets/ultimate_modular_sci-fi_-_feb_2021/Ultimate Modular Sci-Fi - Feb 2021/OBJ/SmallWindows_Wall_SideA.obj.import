@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cd8jrmol5dj4s"
+path="res://.godot/imported/SmallWindows_Wall_SideA.obj-f5260027dc3e9d67dfc08e7eb5736a9f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SmallWindows_Wall_SideA.obj-f5260027dc3e9d67dfc08e7eb5736a9f.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/SmallWindows_Wall_SideA.obj"
+dest_files=["res://.godot/imported/SmallWindows_Wall_SideA.obj-f5260027dc3e9d67dfc08e7eb5736a9f.mesh", "res://.godot/imported/SmallWindows_Wall_SideA.obj-f5260027dc3e9d67dfc08e7eb5736a9f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1tjmv7fpayso"
+path="res://.godot/imported/Props_Computer.obj-1a2efa4c7f17194a89f30945e696c16b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Props_Computer.obj-1a2efa4c7f17194a89f30945e696c16b.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Props_Computer.obj"
+dest_files=["res://.godot/imported/Props_Computer.obj-1a2efa4c7f17194a89f30945e696c16b.mesh", "res://.godot/imported/Props_Computer.obj-1a2efa4c7f17194a89f30945e696c16b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

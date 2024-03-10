@@ -1,0 +1,78 @@
+newmtl Part1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+newmtl Part2Mtl
+Material Color
+Ka 1 0 0.529523
+Kd 1 0 0.529523
+Ks 0.0627451 0 0.033225 
+
+d 1
+
+Ns 0
+
+newmtl Part4Mtl
+Material Color
+Ka 1 1 0
+Kd 1 1 0
+Ks 0.0627451 0.0627451 0 
+
+d 1
+
+Ns 0
+
+newmtl Part128Mtl
+Material Color
+Ka 0.0302565 0.275833 0.0477758
+Kd 0.0302565 0.275833 0.0477758
+Ks 0.00189845 0.0173072 0.00299769 
+
+d 1
+
+Ns 0
+
+newmtl Spawnlocation2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Spawnlocation2_diff.png
+map_Kd Spawnlocation2_diff.png
+map_d Spawnlocation2_diff.png
+
+newmtl Baseplate2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Baseplate2_diff.png
+map_Kd Baseplate2_diff.png
+map_d Baseplate2_diff.png
+
+newmtl Baseplate1Mtl
+Material Color
+Ka 0.103634 0.103634 0.103634
+Kd 0.103634 0.103634 0.103634
+Ks 0.00650253 0.00650253 0.00650253 
+
+d 1
+
+Ns 0
+

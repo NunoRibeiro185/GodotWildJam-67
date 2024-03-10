@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkbty6h1sostx"
+path="res://.godot/imported/Props_Pod.obj-7fc04220dd9b70136e133dda7f13fffc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Props_Pod.obj-7fc04220dd9b70136e133dda7f13fffc.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Props_Pod.obj"
+dest_files=["res://.godot/imported/Props_Pod.obj-7fc04220dd9b70136e133dda7f13fffc.mesh", "res://.godot/imported/Props_Pod.obj-7fc04220dd9b70136e133dda7f13fffc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

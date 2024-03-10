@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3dfr8gb0nnvx"
+path="res://.godot/imported/Staircase.obj-c9a45ff0b54fc80f1c9be15b1683a444.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Staircase.obj-c9a45ff0b54fc80f1c9be15b1683a444.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Staircase.obj"
+dest_files=["res://.godot/imported/Staircase.obj-c9a45ff0b54fc80f1c9be15b1683a444.mesh", "res://.godot/imported/Staircase.obj-c9a45ff0b54fc80f1c9be15b1683a444.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

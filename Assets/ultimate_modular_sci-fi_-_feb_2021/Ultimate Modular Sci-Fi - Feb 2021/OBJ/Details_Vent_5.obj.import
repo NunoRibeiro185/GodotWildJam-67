@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8lkqcxku0fm5"
+path="res://.godot/imported/Details_Vent_5.obj-699306eea02a8842d1985ca4fa694a7c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Details_Vent_5.obj-699306eea02a8842d1985ca4fa694a7c.mesh"]
+
+source_file="res://Assets/ultimate_modular_sci-fi_-_feb_2021/Ultimate Modular Sci-Fi - Feb 2021/OBJ/Details_Vent_5.obj"
+dest_files=["res://.godot/imported/Details_Vent_5.obj-699306eea02a8842d1985ca4fa694a7c.mesh", "res://.godot/imported/Details_Vent_5.obj-699306eea02a8842d1985ca4fa694a7c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
