@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkh04il53ptdp"]
+
+[ext_resource type="PackedScene" uid="uid://bntdk8vki62am" path="res://Assets/Characters/Parasite L Starkie.fbx" id="1_23s1s"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g7ve2"]
+radius = 1.3609
+height = 8.0829
+
+[node name="Parasite" type="CharacterBody3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_23s1s")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.07102, 0)
+shape = SubResource("CapsuleShape3D_g7ve2")

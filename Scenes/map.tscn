@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://col1je5cap3xb"]
 
-[ext_resource type="PackedScene" uid="uid://deoh8sj3wr2kh" path="res://Assets/Map/Map-col.obj" id="1_608jt"]
+[ext_resource type="PackedScene" uid="uid://rwhxqphmlwm5" path="res://Assets/Map/Mapv1.0.fbx" id="1_st8ww"]
 
 [node name="Map" type="Node3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Map-col" parent="." instance=ExtResource("1_608jt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03303, -1.19209e-07, 0.844854)
+[node name="Root Scene" parent="." instance=ExtResource("1_st8ww")]

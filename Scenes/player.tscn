@@ -5,24 +5,27 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lfx1b"]
 radius = 1.95691
-height = 10.5127
+height = 7.52764
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_pv33t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98282, -0.308773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75656, -0.308773)
 shape = SubResource("CapsuleShape3D_lfx1b")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18616, 0)
-h_offset = 1.6
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83478, 0)
+h_offset = 1.48
 
 [node name="Lemon" parent="Camera3D" instance=ExtResource("1_pefvm")]
 transform = Transform3D(0.0583495, -0.00726262, 0.0119409, 0.00827382, -0.0233646, -0.054641, 0.0112638, 0.0547846, -0.0217204, 1.7918, -0.157624, -0.235788)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/Lemon"]
-transform = Transform3D(-16.208, -3.22079, 2.16897, 1.48042, 3.48093, 16.2317, -3.58974, 15.9777, -3.09905, -8.63441, -41.4946, 16.9263)
-light_volumetric_fog_energy = 16.0
-spot_range = 188.088
-spot_angle = 15.24
+transform = Transform3D(-16.2388, -2.56778, 2.73628, 1.43494, 6.98029, 15.0663, -3.46722, 14.9151, -6.58, 26.2864, 128.351, -50.4124)
+light_energy = 8.168
+light_volumetric_fog_energy = 8.936
+spot_range = 164.648
+spot_attenuation = 1.36604
+spot_angle = 16.68
+spot_angle_attenuation = 0.297302
