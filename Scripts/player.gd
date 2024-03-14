@@ -4,11 +4,16 @@ extends CharacterBody3D
 var speed = 0.0
 var jump_speed = 30
 var mouse_sensitivity = 0.002
+
 @onready var camera = $Head/Camera3D
 @onready var flashlight = $Head/Camera3D/Lemon/Flashlight
+@onready var animation_player = $AnimationPlayer
 
 const WALK_SPEED = 15.0
 const SPRINT_SPEED = 25.0
+const CROUCH_SPEED = 5.0
+
+var _is_crouching = false
 
 #Bob Variable
 const BOB_FREQ = 0.7
@@ -37,9 +42,14 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("sprint"):
 		speed = SPRINT_SPEED
+		if _is_crouching:
+			toggle_crouch()
 	else:
 		speed = WALK_SPEED
 	
+	if _is_crouching:
+		speed = CROUCH_SPEED
+		
 	var input = Input.get_vector("left", "right", "forward", "back")
 	var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
 	velocity.x = movement_dir.x * speed
@@ -136,8 +146,20 @@ func _rotate_step_up_separation_ray():
 	stairs_collision_shape_r.disabled = any_too_steep
 #endregion
 
+func toggle_crouch():
+	if _is_crouching:
+		print("UNCROUCH")
+		animation_player.play("Crouch", -1, -CROUCH_SPEED, true)
+	elif !_is_crouching:
+		print("CROUCH")
+		animation_player.play("Crouch", -1, CROUCH_SPEED)
+	_is_crouching = !_is_crouching
+
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
 		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+	
+	if Input.is_action_just_pressed("crouch"):
+		toggle_crouch()

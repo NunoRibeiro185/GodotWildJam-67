@@ -1,25 +1,109 @@
-[gd_scene load_steps=5 format=3 uid="uid://xdiwuhdhjs2a"]
+[gd_scene load_steps=8 format=3 uid="uid://xdiwuhdhjs2a"]
 
 [ext_resource type="PackedScene" uid="uid://jwiy506pir5g" path="res://Assets/1dcmfaayy23s-LemonMonster/lemon.fbx" id="1_pefvm"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_pv33t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lfx1b"]
-radius = 1.95691
-height = 7.52764
+radius = 1.5
+height = 7.5
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_0i06e"]
 length = 4.0
+
+[sub_resource type="Animation" id="Animation_qtwr6"]
+resource_name = "Crouch"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [9.0, 6.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 4.5, 0), Vector3(0, 3, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 7.5, 0), Vector3(0, 4, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4xk1h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [7.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.75, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 6, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyfyc"]
+_data = {
+"Crouch": SubResource("Animation_qtwr6"),
+"RESET": SubResource("Animation_4xk1h")
+}
 
 [node name="Player" type="CharacterBody3D"]
 floor_max_angle = 1.0472
 script = ExtResource("1_pv33t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75656, -0.308773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, 0)
 shape = SubResource("CapsuleShape3D_lfx1b")
 
 [node name="StairsCollisionShape" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -2.552)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -1.7)
 shape = SubResource("SeparationRayShape3D_0i06e")
 
 [node name="RayCast3D" type="RayCast3D" parent="StairsCollisionShape"]
@@ -28,7 +112,7 @@ enabled = false
 target_position = Vector3(0, -4.1, 0)
 
 [node name="StairsCollisionShape_R" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -2.552)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -1.7)
 shape = SubResource("SeparationRayShape3D_0i06e")
 
 [node name="RayCast3D" type="RayCast3D" parent="StairsCollisionShape_R"]
@@ -37,7 +121,7 @@ enabled = false
 target_position = Vector3(0, -4.1, 0)
 
 [node name="StairsCollisionShape_L" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -2.552)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -1.7)
 shape = SubResource("SeparationRayShape3D_0i06e")
 
 [node name="RayCast3D" type="RayCast3D" parent="StairsCollisionShape_L"]
@@ -46,7 +130,7 @@ enabled = false
 target_position = Vector3(0, -4.1, 0)
 
 [node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92662, -0.321938)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
@@ -57,7 +141,7 @@ transform = Transform3D(0.0583495, -0.00726262, 0.0119409, 0.00827382, -0.023364
 transform = Transform3D(-0.776031, -0.592595, 0.215884, -0.0897061, 0.442527, 0.892257, -0.624282, 0.673054, -0.396574, 36.8458, 14.8024, 23.6766)
 light_energy = 8.168
 light_indirect_energy = 8.111
-light_volumetric_fog_energy = 8.936
+light_volumetric_fog_energy = 6.87
 light_size = 0.355
 spot_range = 164.648
 spot_attenuation = 1.36604
@@ -66,3 +150,8 @@ spot_angle_attenuation = 0.435276
 
 [node name="Step_Down" type="RayCast3D" parent="."]
 target_position = Vector3(0, -4.5, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lyfyc")
+}

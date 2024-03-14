@@ -9,7 +9,7 @@
 background_mode = 2
 background_energy_multiplier = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0291
+volumetric_fog_density = 0.0575
 volumetric_fog_albedo = Color(0.423529, 0, 0, 1)
 volumetric_fog_detail_spread = 2.14355
 volumetric_fog_ambient_inject = 16.0
@@ -20,13 +20,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.258819, -0.965926, -3.34e-09, -0.25, -0.0669873, 0.965926, -0.933013, -0.25, -0.258819, 0, 35, 0)
-light_energy = 3.409
+light_color = Color(0.337255, 0.337255, 0.337255, 1)
+light_energy = 0.222
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vc05b")
 
 [node name="Player" parent="." instance=ExtResource("2_twoi6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.5834, 6.48032, -20.023)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.5834, 2.70863, -19.8086)
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_1cmoo")]
 process_mode = 3
