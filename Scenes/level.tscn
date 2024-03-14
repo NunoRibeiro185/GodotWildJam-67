@@ -20,14 +20,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.258819, -0.965926, -3.34e-09, -0.25, -0.0669873, 0.965926, -0.933013, -0.25, -0.258819, 0, 35, 0)
-visible = false
 light_energy = 3.409
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vc05b")
 
 [node name="Player" parent="." instance=ExtResource("2_twoi6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.7716, 2.24609, -55.1817)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.5834, 6.48032, -20.023)
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_1cmoo")]
 process_mode = 3
