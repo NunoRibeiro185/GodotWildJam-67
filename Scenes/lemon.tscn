@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo6dmp8c6uowu"]
+
+[ext_resource type="PackedScene" uid="uid://jwiy506pir5g" path="res://Assets/1dcmfaayy23s-LemonMonster/lemon.fbx" id="1_jlftu"]
+[ext_resource type="Script" path="res://Scripts/lemon.gd" id="2_yjepb"]
+
+[node name="Lemon" instance=ExtResource("1_jlftu")]
+script = ExtResource("2_yjepb")
+
+[node name="RootNode" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.317487, 1.90281)
+target_position = Vector3(0, 0, -1)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://xdiwuhdhjs2a"]
+[gd_scene load_steps=10 format=3 uid="uid://xdiwuhdhjs2a"]
 
+[ext_resource type="PackedScene" uid="uid://jwiy506pir5g" path="res://Assets/1dcmfaayy23s-LemonMonster/lemon.fbx" id="1_pefvm"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_pv33t"]
-[ext_resource type="PackedScene" uid="uid://bo6dmp8c6uowu" path="res://Scenes/lemon.tscn" id="2_d2cl1"]
+[ext_resource type="Script" path="res://Scripts/lemon.gd" id="3_rvrtm"]
 [ext_resource type="PackedScene" uid="uid://dhwhnqp16ih4j" path="res://Scenes/bullet.tscn" id="4_p0doa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lfx1b"]
@@ -135,12 +136,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
-[node name="Lemon" parent="Head/Camera3D" instance=ExtResource("2_d2cl1")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.565, -0.275, -0.625)
+[node name="Lemon" parent="Head/Camera3D" instance=ExtResource("1_pefvm")]
+transform = Transform3D(0.0583495, -0.00726262, 0.0119409, 0.00827382, -0.0233646, -0.054641, 0.0112638, 0.0547846, -0.0217204, 0.36743, -0.157624, -0.37572)
+script = ExtResource("3_rvrtm")
 bullet = ExtResource("4_p0doa")
 
 [node name="Flashlight" type="SpotLight3D" parent="Head/Camera3D/Lemon"]
-transform = Transform3D(-0.868067, -0.495912, 0.0230208, 0.496444, -0.86698, 0.0434697, -0.0015986, 0.0491632, 0.998789, 2.69258, -1.49233, 0.335982)
+transform = Transform3D(-0.776031, -0.592595, 0.215884, -0.0897061, 0.442527, 0.892257, -0.624282, 0.673054, -0.396574, 36.8458, 14.8024, 23.6766)
 light_energy = 8.168
 light_indirect_energy = 8.111
 light_volumetric_fog_energy = 6.87

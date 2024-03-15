@@ -8,6 +8,7 @@ var mouse_sensitivity = 0.002
 @onready var camera = $Head/Camera3D
 @onready var flashlight = $Head/Camera3D/Lemon/Flashlight
 @onready var animation_player = $AnimationPlayer
+@onready var lemon = $Head/Camera3D/Lemon
 
 const WALK_SPEED = 15.0
 const SPRINT_SPEED = 25.0
@@ -163,3 +164,6 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("crouch"):
 		toggle_crouch()
+		
+	if Input.is_action_just_pressed("shoot"):
+		lemon.shoot()
