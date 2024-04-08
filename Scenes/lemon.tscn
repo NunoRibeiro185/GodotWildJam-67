@@ -1,7 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://bo6dmp8c6uowu"]
+[gd_scene load_steps=4 format=3 uid="uid://bo6dmp8c6uowu"]
 
 [ext_resource type="PackedScene" uid="uid://jwiy506pir5g" path="res://Assets/1dcmfaayy23s-LemonMonster/lemon.fbx" id="1_jlftu"]
 [ext_resource type="Script" path="res://Scripts/lemon.gd" id="2_yjepb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjdfr"]
+albedo_color = Color(0.0392157, 0.160784, 0.0627451, 1)
+metallic = 0.31
+metallic_specular = 0.0
+metallic_texture_channel = 1
+roughness = 0.61
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 60.0
+normal_scale = -9.22
+rim_tint = 0.16
+anisotropy = -0.85
+ao_light_affect = 0.25
+heightmap_scale = -2.075
+subsurf_scatter_strength = 0.4
+subsurf_scatter_skin_mode = true
+backlight = Color(1, 0.207843, 0, 1)
+refraction_scale = -0.04
+disable_receive_shadows = true
 
 [node name="Lemon" instance=ExtResource("1_jlftu")]
 script = ExtResource("2_yjepb")
@@ -9,6 +28,9 @@ script = ExtResource("2_yjepb")
 [node name="RootNode" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
+[node name="Cube" parent="RootNode" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_tjdfr")
+
 [node name="RayCast3D" type="RayCast3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.317487, 1.90281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.317487, 2.43326)
 target_position = Vector3(0, 0, -1)

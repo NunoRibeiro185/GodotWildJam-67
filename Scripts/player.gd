@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 
 var speed = 0.0
 var jump_speed = 30
@@ -10,11 +10,12 @@ var mouse_sensitivity = 0.002
 @onready var animation_player = $AnimationPlayer
 @onready var lemon = $Head/Camera3D/Lemon
 
-const WALK_SPEED = 15.0
-const SPRINT_SPEED = 25.0
-const CROUCH_SPEED = 5.0
+const WALK_SPEED = 20.0
+const SPRINT_SPEED = 35.0
+const CROUCH_SPEED = 7.0
 
 var _is_crouching = false
+var caught = false
 
 #Bob Variable
 const BOB_FREQ = 0.7
@@ -24,6 +25,7 @@ var t_bob = 0.0
 #fov variables
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.1
+const MAX_FOV = 125.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -33,33 +35,34 @@ func _ready():
 	camera.fov = BASE_FOV
 	
 func _physics_process(delta):
-	velocity.y += -gravity * delta
-	
-	#if is_on_floor() and Input.is_action_just_pressed("jump"):
-		#velocity.y = jump_speed
-	
-	if Input.is_action_just_pressed("flashlight"):
-		flashlight.visible = !flashlight.visible
-	
-	if Input.is_action_pressed("sprint"):
-		speed = SPRINT_SPEED
-		if _is_crouching:
-			toggle_crouch()
-	else:
-		speed = WALK_SPEED
-	
-	if _is_crouching:
-		speed = CROUCH_SPEED
+	if(!caught):
+		velocity.y += -gravity * delta
 		
-	var input = Input.get_vector("left", "right", "forward", "back")
-	var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
-	velocity.x = movement_dir.x * speed
-	velocity.z = movement_dir.z * speed
-	
-	_rotate_step_up_separation_ray()
-	move_and_slide()
-	_snap_down_the_stairs()
-	_juice_camera(delta)
+		if is_on_floor() and Input.is_action_just_pressed("jump"):
+			velocity.y = jump_speed
+		
+		if Input.is_action_just_pressed("flashlight"):
+			flashlight.visible = !flashlight.visible
+		
+		if Input.is_action_pressed("sprint"):
+			speed = SPRINT_SPEED
+			if _is_crouching:
+				toggle_crouch()
+		else:
+			speed = WALK_SPEED
+		
+		if _is_crouching:
+			speed = CROUCH_SPEED
+			
+		var input = Input.get_vector("left", "right", "forward", "back")
+		var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
+		velocity.x = movement_dir.x * speed
+		velocity.z = movement_dir.z * speed
+		
+		_rotate_step_up_separation_ray()
+		move_and_slide()
+		_snap_down_the_stairs()
+		_juice_camera(delta)
 	
 func _juice_camera(delta):
 	#bobbing
@@ -69,6 +72,7 @@ func _juice_camera(delta):
 	#FOV
 	var velocity_clamped = clamp(velocity.length(), WALK_SPEED - 3, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
+	target_fov = min(target_fov, MAX_FOV)
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 	
 func _headbob(time):
@@ -86,7 +90,7 @@ func _snap_down_the_stairs():
 	if not is_on_floor() and velocity.y <= 0 and (_was_on_floor_last_frame or _snapped_to_stairs_last_frame) and step_down.is_colliding():
 		var body_test_result = PhysicsTestMotionResult3D.new()
 		var params = PhysicsTestMotionParameters3D.new()
-		var max_step_down = -4.5
+		var max_step_down = -3.5
 		params.from = self.global_transform
 		params.motion = Vector3(0, max_step_down, 0)
 		if PhysicsServer3D.body_test_motion(self.get_rid(), params, body_test_result):

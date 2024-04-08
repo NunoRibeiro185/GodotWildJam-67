@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmm6lt3jphm5e"]
+
+[ext_resource type="PackedScene" uid="uid://bcppeiir1f8fp" path="res://Scenes/Map.tscn" id="1_fs7v3"]
+[ext_resource type="Script" path="res://UI/OmniLight3D.gd" id="2_r2yg8"]
+[ext_resource type="Theme" uid="uid://cbxolgpnmkkw8" path="res://UI/theme.tres" id="3_6urdl"]
+[ext_resource type="Script" path="res://UI/MainMenu.gd" id="3_dnydm"]
+
+[sub_resource type="Environment" id="Environment_jxfkg"]
+background_mode = 2
+volumetric_fog_density = 0.0222
+volumetric_fog_albedo = Color(0.129412, 0.129412, 0.129412, 1)
+volumetric_fog_detail_spread = 1.62451
+volumetric_fog_ambient_inject = 16.0
+volumetric_fog_sky_affect = 0.135
+
+[node name="StartMenu" type="CanvasLayer"]
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="Map v3_0" parent="Background" instance=ExtResource("1_fs7v3")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.749, 4.017, -169.365)
+light_color = Color(0.639216, 0, 0, 1)
+light_energy = 1.245
+light_indirect_energy = 0.0
+light_size = 1.0
+light_specular = 5.343
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1235.59
+distance_fade_length = 231.41
+omni_range = 89.161
+omni_attenuation = 0.840896
+omni_shadow_mode = 0
+script = ExtResource("2_r2yg8")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Background"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.0723678, 0, -0.997378, 0, 1, 0, 0.997378, 0, -0.0723678, 159.244, 5.69942, -222.982)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Background"]
+environment = SubResource("Environment_jxfkg")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_6urdl")
+script = ExtResource("3_dnydm")
+gameScenePath = "res://Scenes/level.tscn"
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 120
+text = "Last Strand"
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 85
+
+[node name="NewGameBtn" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "New Game
+"
+flat = true
+
+[node name="LoadBtn" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Load
+"
+flat = true
+
+[node name="OptionsBtn" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Options
+"
+flat = true
+
+[node name="QuitBtn" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Quit
+"
+flat = true
+
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/NewGameBtn" to="Menu" method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/LoadBtn" to="Menu" method="_on_load_btn_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/OptionsBtn" to="Menu" method="_on_options_btn_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/QuitBtn" to="Menu" method="_on_quit_pressed"]

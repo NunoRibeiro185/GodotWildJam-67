@@ -16,6 +16,8 @@ func iterate(node):
 			node.add_child(body, true)
 			body.set_collision_layer_value(1, true)
 			body.set_collision_mask_value(1, true)
+			body.set_collision_layer_value(2,true)
+			body.set_collision_mask_value(2, true)
 			
 			body.owner = node.owner
 			shape.owner = node.owner

@@ -1,15 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://xdiwuhdhjs2a"]
+[gd_scene load_steps=12 format=3 uid="uid://xdiwuhdhjs2a"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_pv33t"]
 [ext_resource type="PackedScene" uid="uid://bo6dmp8c6uowu" path="res://Scenes/lemon.tscn" id="2_d2cl1"]
+[ext_resource type="Texture2D" uid="uid://c81l2t8o0jmug" path="res://Assets/Sprite-0001.png" id="4_g0kxc"]
 [ext_resource type="PackedScene" uid="uid://dhwhnqp16ih4j" path="res://Scenes/bullet.tscn" id="4_p0doa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lfx1b"]
-radius = 1.5
+radius = 1.0
 height = 7.5
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_0i06e"]
-length = 4.0
+length = 2.1
 
 [sub_resource type="Animation" id="Animation_qtwr6"]
 resource_name = "Crouch"
@@ -95,8 +96,18 @@ _data = {
 "RESET": SubResource("Animation_4xk1h")
 }
 
-[node name="Player" type="CharacterBody3D"]
-floor_max_angle = 1.0472
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6p7o"]
+albedo_color = Color(0.141176, 1, 0.164706, 1)
+emission_enabled = true
+emission = Color(0.133333, 0.909804, 0, 1)
+emission_energy_multiplier = 11.39
+
+[sub_resource type="PrismMesh" id="PrismMesh_2oxvy"]
+material = SubResource("StandardMaterial3D_d6p7o")
+size = Vector3(50, 70, 1)
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+floor_max_angle = 1.309
 script = ExtResource("1_pv33t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -104,31 +115,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, 0)
 shape = SubResource("CapsuleShape3D_lfx1b")
 
 [node name="StairsCollisionShape" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -1.7)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2, -1.1)
 shape = SubResource("SeparationRayShape3D_0i06e")
 
 [node name="RayCast3D" type="RayCast3D" parent="StairsCollisionShape"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 enabled = false
-target_position = Vector3(0, -4.1, 0)
+target_position = Vector3(0, -3.1, 0)
+debug_shape_custom_color = Color(0, 0.847059, 0.490196, 1)
 
 [node name="StairsCollisionShape_R" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -1.7)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2.1, -1.1)
 shape = SubResource("SeparationRayShape3D_0i06e")
 
 [node name="RayCast3D" type="RayCast3D" parent="StairsCollisionShape_R"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 enabled = false
-target_position = Vector3(0, -4.1, 0)
+target_position = Vector3(0, -3.1, 0)
+debug_shape_custom_color = Color(0.27451, 1, 0.27451, 1)
 
 [node name="StairsCollisionShape_L" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, -1.7)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2.1, -1.1)
 shape = SubResource("SeparationRayShape3D_0i06e")
 
 [node name="RayCast3D" type="RayCast3D" parent="StairsCollisionShape_L"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 enabled = false
-target_position = Vector3(0, -4.1, 0)
+target_position = Vector3(0, -3.1, 0)
+debug_shape_custom_color = Color(0, 1, 0, 1)
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
@@ -136,19 +150,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
 [node name="Lemon" parent="Head/Camera3D" instance=ExtResource("2_d2cl1")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.565, -0.275, -0.625)
+transform = Transform3D(0.149995, 0, 0.00130898, 0, 0.15, 0, -0.00130898, 0, 0.149994, 0.5, -0.275, -0.625)
 bullet = ExtResource("4_p0doa")
 
 [node name="Flashlight" type="SpotLight3D" parent="Head/Camera3D/Lemon"]
 transform = Transform3D(-0.868067, -0.495912, 0.0230208, 0.496444, -0.86698, 0.0434697, -0.0015986, 0.0491632, 0.998789, 2.69258, -1.49233, 0.335982)
-light_energy = 8.168
-light_indirect_energy = 8.111
-light_volumetric_fog_energy = 6.87
+light_color = Color(1, 1, 0.709804, 1)
+light_energy = 6.0
+light_volumetric_fog_energy = 1.552
 light_size = 0.355
-spot_range = 164.648
-spot_attenuation = 1.36604
-spot_angle = 13.68
-spot_angle_attenuation = 0.435276
+spot_range = 604.811
+spot_attenuation = 1.07177
+spot_angle = 44.73
+spot_angle_attenuation = 1.86607
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera3D"]
+visible = false
+offset_left = 940.0
+offset_top = 520.0
+offset_right = 980.0
+offset_bottom = 560.0
+texture = ExtResource("4_g0kxc")
 
 [node name="Step_Down" type="RayCast3D" parent="."]
 target_position = Vector3(0, -4.5, 0)
@@ -157,3 +179,8 @@ target_position = Vector3(0, -4.5, 0)
 libraries = {
 "": SubResource("AnimationLibrary_lyfyc")
 }
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 167, 0)
+layers = 2
+mesh = SubResource("PrismMesh_2oxvy")

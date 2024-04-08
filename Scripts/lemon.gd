@@ -9,7 +9,6 @@ var in_the_chamber = 100
 
 func shoot():
 	if in_the_chamber > 0:
-		print("FIRE")
 		in_the_chamber -= 1
 		var b = bullet.instantiate()
 		b.position = gun_barrel.global_position

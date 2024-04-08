@@ -1,16 +1,21 @@
 extends Node3D
 
 var velocity := Vector3.ZERO
-const SPEED = 250.0
+const SPEED = 1000.0
 @onready var mesh = $MeshInstance3D
-@onready var ray = $RayCast3D
+@onready var ray = $MeshInstance3D/RayCast3D
 @onready var particles = $GPUParticles3D
 
 func _process(delta):
 	position += transform.basis * Vector3(0,0,-SPEED) * delta
 	if ray.is_colliding():
+		print("colliding")
 		mesh.visible = false
 		particles.emitting = true
+		if ray.get_collider().is_in_group("enemy"):
+			print("HIT!")
+			ray.get_collider().hit()
+		ray.enabled = false
 		await get_tree().create_timer(1.0).timeout
 		queue_free()
 

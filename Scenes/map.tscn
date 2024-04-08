@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://col1je5cap3xb"]
+[gd_scene load_steps=2 format=3 uid="uid://bcppeiir1f8fp"]
 
-[ext_resource type="PackedScene" uid="uid://rwhxqphmlwm5" path="res://Assets/Map/Mapv1.0.fbx" id="1_st8ww"]
+[ext_resource type="PackedScene" uid="uid://b6ehi7ohfkt8v" path="res://Assets/Map/Map v3.0.glb" id="1_ufsk2"]
 
-[node name="Map" type="Node3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+[node name="Map v3_0" instance=ExtResource("1_ufsk2")]
 
-[node name="Root Scene" parent="." instance=ExtResource("1_st8ww")]
+[node name="CollisionShape3D" parent="Map v3/StaticBody3D" index="0"]
+visible = false
