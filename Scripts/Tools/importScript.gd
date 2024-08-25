@@ -9,7 +9,7 @@ func iterate(node):
 	if node != null:
 		if node is MeshInstance3D:
 			var body = StaticBody3D.new()
-			var collision_shape = node.mesh.create_trimesh_shape()
+			var collision_shape = node.mesh.create_convex_shape()
 			var shape = CollisionShape3D.new()
 			shape.shape = collision_shape
 			body.add_child(shape, true)
